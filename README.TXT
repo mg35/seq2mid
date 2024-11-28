@@ -1,3 +1,12 @@
+Small fork adding cmake scripts to compile the code on x86 so it doesn't have to be run on DOSBox.
+
+Original repo's readme below 
+
+v
+v
+
+
+
 SEQ2MID v1.0b3 -SATURN VERSION-
 ================================
 
