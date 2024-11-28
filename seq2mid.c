@@ -3,12 +3,6 @@
 #include <stdlib.h>
 #include <string.h>
 
-#ifdef WIN32
-# include <dir.h>
-#else
-# include "dir_emu.h"
-#endif
-
 #include "decode.h"
 
 #define SLASH_STR "\\"
@@ -310,10 +304,10 @@ void _splitpath (const char *path, char *drive, char *dir, char *fname,
 
 void CreateFileName(char *orig_filename, unsigned char number)
 {
-   char drive[MAXDRIVE];
-   char path[MAXDIR];
-   char file[MAXFILE];
-   char ext[MAXEXT];
+   char drive[3];
+   char path[256];
+   char file[256];
+   char ext[256];
 
    _splitpath(orig_filename, drive, path, file, ext);
    sprintf(file, "%s%02d.mid", file, number);
